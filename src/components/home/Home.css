@@ -1,0 +1,107 @@
+@keyframes clipTopAnimation {
+    from {
+      height: 0;
+    }
+    to {
+      height: 50vh;
+    }
+  }
+  
+  @keyframes clipBottomAnimation {
+    from {
+      height: 50vh;
+    }
+    to {
+      height: 0;
+    }
+  }
+  
+  @keyframes marqueeAnimation {
+    0% {
+      top: 0;
+    }
+    100% {
+      top: 50%;
+    }
+  }
+  
+  @keyframes slideInAnimation {
+    0% {
+      left: 100%;
+    }
+    100% {
+      left: 0;
+    }
+  }
+  
+  @keyframes fadeOutAnimation {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  
+  .clip-top {
+    animation: clipTopAnimation 2s 1s ease-in-out forwards;
+  }
+  
+  .clip-bottom {
+    animation: clipBottomAnimation 2s 1s ease-in-out forwards;
+  }
+  
+  .marquee {
+    animation: marqueeAnimation 3.5s 0.75s ease-in-out forwards;
+  }
+  
+  .clip-top .marquee,
+  .clip-bottom .marquee {
+    animation: slideInAnimation 5s 1s ease-in-out forwards;
+  }
+  
+  .clip-center .marquee {
+    animation: slideInAnimation 5s 1s ease-in-out forwards;
+  }
+  
+  .clip-top,
+  .clip-bottom,
+  .clip-center .marquee {
+    animation-fill-mode: forwards;
+  }
+  
+  .clip-top,
+  .clip-bottom .marquee,
+  .clip-center .marquee {
+    animation-delay: 6s;
+  }
+  
+  .clip-top {
+    animation-name: clipTopAnimation;
+  }
+  
+  .clip-bottom {
+    animation-name: clipBottomAnimation;
+  }
+  
+  .marquee {
+    animation-name: marqueeAnimation;
+  }
+  
+  .clip-top .marquee,
+  .clip-bottom .marquee,
+  .clip-center .marquee {
+    animation-name: slideInAnimation;
+  }
+  
+  .clip-top,
+  .clip-bottom,
+  .clip-top .marquee span,
+  .clip-bottom .marquee span,
+  .clip-center .marquee span {
+    animation-name: fadeOutAnimation;
+    animation-delay: 6s;
+    opacity: 1;
+    animation-fill-mode: forwards;
+  }
+  

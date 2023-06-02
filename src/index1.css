@@ -1,0 +1,533 @@
+@font-face {
+    font-family: 'Moresby';
+    src: url(Moresby.ttf);
+}
+@font-face {
+    font-family: 'Neue Montreal';
+    src: url(PPNeueMontreal-Medium.otf);
+}
+@font-face {
+    font-family: 'PPMori';
+    src: url(PPMori-Regular.otf);
+}
+@font-face {
+    font-family: 'Suisse';
+    src: url(SuisseIntl-Regular.ttf);
+}
+@font-face {
+    font-family: 'Mitera';
+    src: url(Mitera\ Regular.ttf);
+}
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+::-webkit-scrollbar {
+    display: none;
+}
+html, body {
+    
+    margin: 0;
+    padding: 0;
+    background: #E3E5E8;
+}
+body {
+    scroll-behavior: smooth;
+    overflow-y: scroll;
+    
+}
+.loader {
+    width: 100vw;
+    height: 100vh;
+}
+
+.loader-clip {
+    position: absolute;
+    width: 100vw;
+    height: 33.3vh;
+    overflow: auto;
+    z-index: 1000;
+}
+
+.clip-top {
+    top: 0;
+    clip-path: inset(0 0 0 0);
+    background: #000;
+}
+
+.clip-bottom {
+    bottom: 0;
+    clip-path: inset(0 0 0 0);
+    background: #000;
+}
+
+.clip-center {
+    overflow: hidden;
+    position: relative;
+    width: 100vw;
+    height: 33.3vh;
+    top: 33.3vh;
+
+}
+
+.marquee {
+    position: relative;
+    top: 200%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200vw;
+    color: #fff;
+    mix-blend-mode: difference;
+    font-size: 16vw;
+}
+
+.marquee-container {
+    width: 100%;
+    padding-top: 0.2em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Moresby';
+
+}
+
+.container {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    z-index: 1;
+    font-family: 'Neue Montreal';
+    text-transform: uppercase;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    font-size: 14px;
+}
+
+.container .nav, .container .footer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    padding: 2em 4em;
+}
+
+.nav-items a {
+  text-decoration: none;
+  color: #000;  
+}
+
+.nav-items a:not(:last-child) {
+    padding-right: 4em;
+}
+
+.content {
+    width: 100vw;
+    
+    background: #F3EFE0;
+    color: #4D455D;
+    padding: 8rem;
+    border-top: 2px solid #000;
+    border-bottom: 2px solid #000;
+   
+
+}
+
+.abt
+{
+    width: 100%;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 5rem;
+
+}
+
+.abt .abt-left {
+    width: 60%;
+    font-size: 4rem;
+    font-family: 'PPMori';
+    
+}
+.abt .abt-right {
+    width: 30%;
+    font-family: 'Suisse';
+    text-align: left;
+    font-weight:400;
+}
+
+.abt .abt-right .aboutbtn {
+    margin-top: 36px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    font-family: 'Suisse';
+    font-size: 12px;
+    background-color: #edbfff;
+    color: #0f0d0d;
+    border-radius: 100px;
+    padding: 0.5em 3em;
+    border-color: transparent;
+}
+.abt .abt-right .aboutbtn:hover {
+    background-color: #4D455D;
+    color: #E3E5E8;
+    transition: all .3s ease-in-out;
+}
+.content h1 {
+    font-family: 'PPMori';
+    font-size: 7rem;
+}
+.scrollbtn {
+    font-family: 'Neue Montreal';
+    background: transparent;
+    border: none;
+    font-size: large;
+}
+
+.cardpage
+{
+    border-bottom: 2px solid black;
+}
+
+.card-container {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.cardnav {
+    position: absolute;
+    width: 100%;
+    padding: 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Neue Montreal';
+    text-transform: uppercase;
+    color: #fff;
+    mix-blend-mode: difference;
+    z-index: 2;
+}
+
+.items {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+
+}
+.item{
+    position: relative;
+    width: 25vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.divider {
+    position: relative;
+    width: 1px;
+    height: 100vw;
+    background: rgba(0, 0, 0, 0.25);
+
+}
+
+.img-overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: #dfdbd5;
+    transition: 1s cubic-bezier(0.075, 0.82,0.165, 1 );
+}
+
+.item-wrapper:hover .img-overlay {
+    top: -100%;
+}
+
+.item img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(1.5) ;
+    transition: 2s cubic-bezier(0.075, 0.82,0.165, 1 );;
+}
+
+.item-wrapper:hover img {
+    transform: scale(1);
+}
+
+.item-copy {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8em 2em;
+    font-family: 'Mitera';
+    text-transform: uppercase;
+    line-height: 60px;
+    color: #000;
+    z-index: 2;
+    transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.item-name {
+    font-size: 40px;
+}
+
+.item-name span {
+    font-family: 'Neue Montreal';
+    font-size: 20px;
+    line-height: 120%;
+    text-transform: uppercase;
+    display: block;
+}
+
+.item-wrapper:hover .item-copy {
+    color: #fff;
+
+}
+
+.item-copy .num{
+    
+    color: red;
+    font-size: 150px;
+}
+
+
+.contactpage {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+}
+
+.contactpage .left,
+.contactpage .right {
+    flex-basis: 50%;
+}
+.contactpage .left {
+    padding-top: 8rem;
+    font-family: 'PPMori';
+    font-size: calc(max(15px,.834vw));
+    line-height: 1.3;
+    hyphens: none;
+    color: #0f0d0d;
+    box-sizing: border-box;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding: calc(calc(8rem + calc(max(52px,3.125vw)))) 4vw 4vw;
+    border-right: 1px solid #0f0d0d;
+    padding-bottom: 7vw;
+}
+.left-content h1 {
+    font-family: 'PPMori',sans-serif;
+    font-weight: 400;
+    pointer-events: none;
+    overflow: hidden;
+    font-size: 8.334vw;
+    text-transform: initial;
+    letter-spacing: -.03em;
+    line-height: 1;
+}
+.contactpage .left-content .row__inner {
+    font-family: 'PPMori';
+    
+    display: flex;
+    margin-top: auto;
+    padding-top: 5rem;
+    width: 100%;
+}
+.contactpage .left-content .row__inner .col__inner
+{
+    
+    margin-right: 1.5vw;
+}
+.contactpage .left-content .row__inner .col__inner span {
+    font-weight: bold;
+}
+.contactpage .right {
+    font-family: 'PPMori';
+    font-size: calc(max(15px,.834vw));
+    line-height: 1.3;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding: calc(calc(8rem + calc(max(52px,3.125vw)))) 4vw 4vw;
+    position: relative;
+}
+
+.contactpage .right textarea {
+    
+    width: 100%;
+    background: 0 0;
+    border: none;
+    outline: 0;
+    resize: none;
+    font-weight: 400;
+    font-family: 'Suisse';
+    font-size: calc(max(20px,1.35vw));
+    line-height: 1.3;
+    letter-spacing: -.02em;
+    min-height: 250px;
+    height: 257px;
+    overflow-y: hidden;
+}
+.contactpage .right .wrapper {
+    
+    font-family: 'PPMori';
+    font-size: calc(max(15px,.834vw));
+    text-transform: uppercase;
+    position: relative;
+    display: flex;
+    white-space: nowrap;
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+    flex-shrink: 0;
+    width: 38vw;
+}
+
+.contactpage .right .row {
+    
+    display: flex;
+    width: 100%;
+    align-items: center;
+    margin-top: auto;
+    padding-top: 2rem;
+}
+
+.contactpage .right .row .col__inner {
+    
+    width: 100%;
+    align-items: center;
+    
+    padding-top: 2rem;
+    padding-right: 30px;
+}
+.btn__circle {
+    
+    width: 10.5vw;
+    min-width: 10.5vw;
+    height: 10.5vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    font-size: 12px;
+    border-radius: 50%;
+    font-family: 'Suisse';
+    text-align: center;
+    transition: background .2s,color .2s;
+    border: none;
+    outline: 0;
+    cursor: pointer;
+    background: #0f0d0d;
+    color: #fefcff;
+    margin: 5% 9% 0 auto;
+    
+}
+.cursor__hover
+{
+    
+    cursor: pointer;
+    border-bottom: 1px solid #0f0d0d;
+    padding: 5px 0;
+    display: block;
+    width: 100%;
+    margin: 1rem 0 0;
+    margin-bottom: 10px;
+}
+.cursor__hover input 
+{
+    
+   
+    
+    width: 100%;
+    background: 0 0;
+    border: none;
+    outline: 0;
+    resize: none;
+    font-size: 16px;
+}
+@media (max-width: 600px) {
+    .container .nav, .container .footer {
+        flex-direction: column;
+        align-items: center;
+        padding: 1em;
+    }
+
+    .nav-items a:not(:last-child) {
+        padding-right: 0;
+        margin-bottom: 1em;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .abt {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .abt .abt-right {
+        margin-top: 20px;
+        width: 100%;
+    }
+
+    .abt .abt-right .aboutbtn {
+        margin-top: 1.5rem;
+    }
+
+    .abt .abt-left {
+        width: 60%;
+        font-size: 3rem;
+        font-family: 'PPMori';
+        
+    }
+}
+
+@media only screen and (max-width: 1023px) {
+    .items {
+        flex-wrap: wrap;
+    }
+    
+    .item {
+        border: 1px solid rgba(0, 0, 0, 0.25);
+        width: 50%;
+        height: 50vh;
+    }
+    
+    .divider {
+        display: none;
+    }
+    
+    .item-copy {
+        padding: 4em 2em;
+        font-size: 16px;
+        line-height: 40px;
+    }
+    
+    .item-name {
+        font-size: 30px;
+    }
+    
+    .item-name span {
+        font-size: 16px;
+    }
+    
+    .item-copy .num {
+        font-size: 100px;
+    }
+}

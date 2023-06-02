@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
+</head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+<body>
+    <div class="loader">
+        <div class="loader-clip clip-top">
+            <div class="marquee">
+                <div class="marquee-container">
+                    <span>Alora</span>
+                    <span>Alora</span>
+                    Alora
+                    <span>Alora</span>
+                    <span>Alora</span>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="loader-clip clip-bottom">
+            <div class="marquee">
+                <div class="marquee-container">
+                    <span>Alora</span>
+                    <span>Alora</span>
+                    Alora
+                    <span>Alora</span>
+                    <span>Alora</span>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="clip-center">
+            <div class="marquee">
+                <div class="marquee-container">
+                    <span>Alora</span>
+                    <span>Alora</span>
+                    Alora
+                    <span>Alora</span>
+                    <span>Alora</span>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="nav">
+            <div class="logo"></div>
+            <div class="nav-items">
+                <a href="#idea">Idea</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+        <div id="scroll-down-btn" style="display: none; position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%);">
+            <button onclick="scrollToNextSection()" class="scrollbtn">Scroll Down </button>
+        </div>
+    
+        <div class="footer">
+            
+            <p>Choose your mood <br> Shop Your Brands</p>
+        </div>
+    </div>
+
+    <div class="content" id="about">
+        <h1>We are Alora,</h1>
+
+        <div class="abt">
+            <div class="abt-left">
+                A CREATIVE <br>COLLECTIVE <br>MADE TO UNLOCK <br>YOUR TRUE <br>INNER DESIRES
+            </div>
+
+            <div class="abt-right">
+                <h2>We weave together bold strategy and creative execution to produce thought-provoking shopping experiences. We take a highly personalized approach to the brands and products to our users. Born in the Chennai - now serving clients worldwide.</h2>
+
+                <button class="aboutbtn">About US</button>
+            </div>
+        </div>
+    </div>
+    <div class="cardpage" id="idea">
+        <div class="card-container">
+            <div class="cardnav">
+                <div class="card-nav-item"></div>
+                <div class="card-nav-item">CHOOSE YOUR STYLE - SHOP ALL YOU WANT</div>
+                <div class="card-nav-item"></div>
+            </div>
+            <div class="items">
+                <div class="item">
+                    <div class="item-wrapper">
+                        <img src="1.jpg" alt="">
+                        <div class="img-overlay"></div>
+                        <div class="item-copy">
+                            <div class="item-name">the hitman <span>mdxci</span></div>
+                            <div class="num">1</div>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="divider"></div>
+                <div class="item">
+                    <div class="item-wrapper">
+                        <img src="2.jpg" alt="">
+                        <div class="img-overlay"></div>
+                        <div class="item-copy">
+                            <div class="item-name">gaia <span>mdxcii</span></div>
+                            <div class="num">2</div>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="divider"></div>
+                <div class="item">
+                    <div class="item-wrapper">
+                        <img src="3.jpg" alt="">
+                        <div class="img-overlay"></div>
+                        <div class="item-copy">
+                            <div class="item-name">retro <span>mdxciii</span></div>
+                            <div class="num">3</div>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="divider"></div>
+                <div class="item">
+                    <div class="item-wrapper">
+                        <img src="4.jpg" alt="">
+                        <div class="img-overlay"></div>
+                        <div class="item-copy">
+                            <div class="item-name">funky <span>mdxciv</span>
+                            </div>
+                            <div class="num">4</div>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="divider"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="contactpage" id="contact">
+
+        <div class="left">
+            
+            <div class="left-content">
+                <h1>Let's reimagine what's possible</h1>
+                <div class="row__inner">
+                    <div class="col__inner">
+                      <span>Follow Us</span>
+                      <p>
+                        <a href="#">Instagram</a>,
+                        <a href="#">LinkedIn</a>
+                      </p>
+                    </div>
+                    <div class="col__inner">
+                      <span>Phone</span>
+                      <p><a href="#">(+91) 123456789</a></p>
+                    </div>
+                    <div class="col__inner">
+                      <span>General Inquiries</span>
+                      <p>
+                        <a href="#">hello@alora.com</a>
+                      </p>
+                    </div>
+                    <div class="col__inner">
+                      <span>Main Hub</span>
+                      <p>Chennai</p>
+                    </div>
+                  </div>
+            </div>
+
+        </div>
+
+        <div class="right">
+            <div class="wrapper" style="width: 38vw;">
+                <h1>We are listening,</h1>
+                <div class="highlight" style="opacity: 0.4522; display: none;"></div>
+              </div>
+            <textarea type="text" name="message" id="message" placeholder="Tell us about your company and how we can help" required="" style="height:257px;overflow-y:hidden;" class="loaded"></textarea>
+            <div class="row">
+                <div class="col__inner">
+                  <label for="name" class="cursor__hover --highlight"><input type="text" placeholder="Your Name" name="name" id="name" required=""></label>
+                  <label for="email" class="cursor__hover --highlight"><input type="email" placeholder="Your Email" name="email" id="email" required=""></label>
+                </div>
+                <button class="btn__circle" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px);">
+                  <div class="no-overflow" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px);">
+                    <div class="inner">
+                      <p>Send Inquiry</p>
+                      
+                    </div>
+                  </div>
+                </button>
+              </div>
+        </div>
+
+    </div>
+</body>
+<script>
+    gsap.from(".clip-top, .clip-bottom", 2, {
+        delay: 1,
+        height: "50vh",
+        ease: "power4.inOut",
+    });
+
+    gsap.to(".marquee", 3.5, {
+        delay: 0.75,
+        top: "50%",
+        ease: "power4.inOut"
+    });
+    gsap.from(".clip-top .marquee .clip-bottom .marquee", 5, {
+        delay: 1,
+        left: "100%",
+        ease: "power4.inOut"
+    });
+    gsap.from(".clip-center .marquee", 5, {
+        delay: 1,
+        left: "-50%",
+        ease: "power3.inOut"
+    });
+
+    gsap.to(".clip-top", 2, {
+        delay: 6,
+        clipPath: "inset(0 0 100% 0)",
+        ease: "power4.inOut"
+    });
+    gsap.to(".clip-bottom", 2, {
+        delay: 6,
+        clipPath: "inset(100% 0 0 0)",
+        ease: "power4.inOut"
+    });
+
+    gsap.to(".clip-top .marquee span, .clip-bottom .marquee span, .clip-center .marquee span", 1, {
+    delay: 6,
+    opacity: 0,
+    ease: "power2.inOut"
+});
+
+function scrollToNextSection() {
+           
+            var nextSection = document.querySelector('.content');
+            nextSection.scrollIntoView({ behavior: 'smooth' });
+        }
+        var animationsDuration = 6 * 1000;
+        setTimeout(function() {
+            var scrollDownBtn = document.getElementById('scroll-down-btn');
+            scrollDownBtn.style.display = 'block';
+        }, animationsDuration + 2000); 
+</script>
+
+</html>
